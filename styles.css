@@ -61,7 +61,7 @@ a { color: inherit; text-decoration: none; }
   display: none; /* mobile only — desktop uses the corner pill */
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 32px;
+  padding: 14px 26px;
   margin-top: 28px;
 }
 
