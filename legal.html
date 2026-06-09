@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal — King of the Block</title>
+  <meta name="description" content="Legal notice and privacy policy for King of the Block.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="index.html">&larr; King of the Block</a>
+
+    <h1>Legal</h1>
+
+    <p class="todo"><strong>TODO before going live:</strong> fill in the name,
+    address and email below (Impressum is legally required in Germany), and
+    review the privacy policy text. This page&rsquo;s URL also goes into App Store
+    Connect as the app&rsquo;s privacy policy URL.</p>
+
+    <h2>Legal notice (Impressum)</h2>
+    <p>
+      [YOUR FULL NAME]<br>
+      [STREET AND NUMBER]<br>
+      [POSTAL CODE] Hamburg<br>
+      Germany<br>
+      Email: [YOUR EMAIL]
+    </p>
+    <p>Responsible for content pursuant to &sect; 18 Abs. 2 MStV: [YOUR FULL NAME], address as above.</p>
+
+    <h2>Privacy policy</h2>
+    <p><em>Last updated: [DATE]</em></p>
+
+    <h2>The short version</h2>
+    <p>King of the Block is local-first. Your walks are stored on your device
+    and backed up to your private iCloud. If you choose to sign in and add
+    friends, your walk routes are synced to our server so your friends can see
+    them. We collect nothing else, show no ads, and never sell data.</p>
+
+    <h2>What the app processes</h2>
+    <ul>
+      <li><strong>Location (GPS) during walks.</strong> Used to draw your route and
+      paint the streets you walk. Stored on your device and in your private
+      iCloud (Apple CloudKit). Walk routes are only uploaded to our server if
+      you sign in to use the social features.</li>
+      <li><strong>Apple Health workouts (optional, read-only).</strong> If you enable
+      the import, the app reads your outdoor workouts and their routes to paint
+      them on your map. The app never writes to Apple Health, and your Health
+      data itself is never uploaded.</li>
+      <li><strong>Account data (optional).</strong> If you sign in with Apple, we
+      store a random user ID and the username you choose. We do not receive
+      your name, and your email is handled by Apple&rsquo;s sign-in service.</li>
+      <li><strong>Friend relationships.</strong> Friend requests and friendships are
+      stored on our server so the competition can work.</li>
+    </ul>
+
+    <h2>Where data is processed</h2>
+    <ul>
+      <li><strong>Apple iCloud / CloudKit</strong> &mdash; private backup of your walks
+      (Apple Inc., under your Apple account).</li>
+      <li><strong>Supabase</strong> &mdash; database and sign-in for the optional social
+      features (profiles, friendships, shared walk routes).
+      <!-- TODO: add your Supabase project region, e.g. "hosted in the EU (Frankfurt)" -->
+      [REGION].</li>
+      <li><strong>Stadia Maps</strong> &mdash; your walk&rsquo;s GPS trace is sent to a
+      route-matching service to snap it onto the street map. The trace is
+      processed to compute the result and is not used to identify you.</li>
+      <li><strong>OpenStreetMap / Overpass API</strong> &mdash; nearby railway geometry
+      is queried to detect train rides. Only approximate area coordinates are
+      sent, never your identity.</li>
+    </ul>
+
+    <h2>Your rights (GDPR)</h2>
+    <p>You can access, correct, export or delete your data at any time. Deleting
+    your account in the app (Friends &rarr; Delete account) removes your profile,
+    friendships and uploaded walks from our server. Local data can be deleted by
+    deleting your walks or the app. For any request, contact
+    [YOUR EMAIL].</p>
+
+    <h2>What we don&rsquo;t do</h2>
+    <ul>
+      <li>No advertising, no ad tracking, no analytics SDKs.</li>
+      <li>No selling or sharing of personal data.</li>
+      <li>No reading of your contacts, photos or anything beyond what&rsquo;s listed above.</li>
+    </ul>
+  </main>
+</body>
+</html>
