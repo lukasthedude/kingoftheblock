@@ -1,6 +1,15 @@
 /* King of the Block — landing page
    Inter, Apple-minimal, matches Figma mockups (Web.png / Mobile.png) */
 
+/* Self-hosted Inter (variable, 100–900) — no third-party font CDN (GDPR) */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/inter-var.woff2") format("woff2");
+}
+
 :root {
   --black: #000;
   --ink: #1d1d1f;
@@ -44,16 +53,16 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   top: 28px;
   right: 36px;
-  font-size: 13px;
-  padding: 9px 18px;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 .pill--hero {
   display: none; /* mobile only — desktop uses the corner pill */
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 13px 30px;
-  margin-top: 26px;
+  padding: 14px 32px;
+  margin-top: 28px;
 }
 
 /* ---------- Hero / sections ---------- */
@@ -73,7 +82,7 @@ a { color: inherit; text-decoration: none; }
   width: auto;
 }
 
-.hero-copy { max-width: 230px; }
+.hero-copy { max-width: 280px; }
 
 .app-icon {
   width: 88px;
@@ -83,15 +92,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-copy h1 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
   margin: 0 0 10px;
   color: var(--black);
 }
 
 .hero-copy p {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.5;
   color: var(--grey);
   margin: 0;
@@ -108,14 +117,14 @@ a { color: inherit; text-decoration: none; }
 .legend-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13.5px;
+  gap: 11px;
+  font-size: 16px;
   color: var(--ink);
 }
 
 .dot {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   flex: none;
 }
@@ -132,9 +141,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   padding: 48px 24px 44px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 footer .brand { font-weight: 600; color: var(--black); }
@@ -151,14 +160,14 @@ footer a:hover { color: var(--ink); }
 
 .page .back {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--black);
   margin-bottom: 56px;
 }
 
 .page h1 {
-  font-size: 28px;
+  font-size: 31px;
   font-weight: 700;
   letter-spacing: -0.3px;
   margin: 0 0 28px;
@@ -166,14 +175,14 @@ footer a:hover { color: var(--ink); }
 }
 
 .page h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin: 36px 0 8px;
   color: var(--black);
 }
 
 .page p, .page li {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--body);
   margin: 0 0 14px;
@@ -184,7 +193,7 @@ footer a:hover { color: var(--ink); }
   border: 1px solid #f0e0a0;
   border-radius: 10px;
   padding: 12px 16px;
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: #6d5900;
 }
 
@@ -202,7 +211,7 @@ footer a:hover { color: var(--ink); }
 
   .section--hero { padding-top: 76px; }
 
-  .app-icon { display: block; margin: 0 auto; }
+  .app-icon { display: block; margin: 0 auto; width: 96px; height: 96px; border-radius: 22px; }
 
   .hero-copy {
     text-align: center;
@@ -210,23 +219,23 @@ footer a:hover { color: var(--ink); }
   }
 
   .hero-copy h1 {
-    font-size: 26px;
-    margin: 28px 0 10px;
+    font-size: 31px;
+    margin: 30px 0 10px;
   }
 
-  .hero-copy p { font-size: 17px; }
+  .hero-copy p { font-size: 20px; }
 
   .pill--hero { display: inline-block; }
 
   .phone {
     height: auto;
-    width: min(62vw, 250px);
+    width: min(80vw, 330px);
     margin: 64px 0;
   }
 
   .legend { margin: 4px 0 8px; }
-  .legend-row { font-size: 14px; }
+  .legend-row { font-size: 17px; }
 
-  footer { gap: 22px; padding: 40px 24px 36px; }
+  footer { gap: 24px; padding: 40px 24px 36px; }
   footer .brand { display: none; }
 }
