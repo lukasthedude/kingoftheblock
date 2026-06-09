@@ -237,10 +237,10 @@ footer a:hover { color: var(--ink); }
     margin: 64px 0;
   }
 
-  /* Same width as the phone above, so the legend's left edge lines up with
-     the phone's left edge instead of floating centered. */
+  /* Narrower than the phone, so the centered block sits left-of-center —
+     a clean aligned column without hugging the phone's edge. */
   .legend {
-    width: min(80vw, 330px);
+    width: min(55vw, 230px);
     align-items: flex-start;
     margin: 4px 0 8px;
   }
