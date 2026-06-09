@@ -237,7 +237,13 @@ footer a:hover { color: var(--ink); }
     margin: 64px 0;
   }
 
-  .legend { margin: 4px 0 8px; }
+  /* Same width as the phone above, so the legend's left edge lines up with
+     the phone's left edge instead of floating centered. */
+  .legend {
+    width: min(80vw, 330px);
+    align-items: flex-start;
+    margin: 4px 0 8px;
+  }
   .legend-row { font-size: 17px; }
 
   footer { gap: 24px; padding: 40px 24px 36px; }
