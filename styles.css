@@ -72,7 +72,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 96px;
+  gap: 150px;
   padding: 48px 24px;
 }
 
