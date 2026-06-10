@@ -230,7 +230,7 @@ footer a:hover { color: var(--ink); }
 
   .side { width: auto; }
 
-  .app-icon { display: block; margin: 0 auto; width: 96px; height: 96px; border-radius: 22px; }
+  .app-icon { display: block; margin: 0 auto; width: 88px; height: 88px; border-radius: 20px; }
 
   .hero-copy {
     text-align: center;
