@@ -213,19 +213,14 @@ footer a:hover { color: var(--ink); }
 @media (max-width: 760px) {
   .pill--corner { display: none; }
 
-  /* Mobile sections are taller than the screen — hard snapping would trap
-     mid-content. Gentle proximity snap centers each phone as you near it. */
-  html { scroll-snap-type: y proximity; }
-  footer { scroll-snap-align: none; }
-  .phone { scroll-snap-align: center; }
+  /* No scroll snap on mobile — natural scrolling only (snap is desktop-only). */
+  html { scroll-snap-type: none; }
 
   .section {
     flex-direction: column;
     gap: 0;
     min-height: 0;
     padding: 0 24px;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
   }
 
   .section--hero { padding-top: 76px; }
