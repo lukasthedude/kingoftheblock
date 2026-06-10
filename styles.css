@@ -202,6 +202,9 @@ footer a:hover { color: var(--ink); }
   margin: 0 0 14px;
 }
 
+/* Tighter run-on lines (e.g. the contact email directly above the X link) */
+.page p.tight { margin-bottom: 5px; }
+
 .page .todo {
   background: #fff8e1;
   border: 1px solid #f0e0a0;
