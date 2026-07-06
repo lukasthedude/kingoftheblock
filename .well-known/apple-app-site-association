@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["DGKB38FHNU.friendscup.lukaslau.com.King-of-the-Block"],
+        "components": [
+          {
+            "/": "/add/*",
+            "comment": "Friend invite deep links"
+          }
+        ]
+      }
+    ]
+  }
+}
