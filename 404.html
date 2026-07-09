@@ -42,8 +42,34 @@
     }
     .invite-wrap h1 { margin: 0; }
     .invite-wrap p { margin: 0; opacity: 0.75; }
-    .invite-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; }
-    .open-app { font-size: 0.95rem; opacity: 0.8; }
+    .invite-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 14px; }
+    /* Self-contained buttons: the landing page's .pill--hero is display:none on
+       desktop (mobile-only there), which made the CTA invisible on a Mac. */
+    .btn-primary {
+      display: inline-block;
+      background: #4FB06E;            /* the app's walked-green */
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 980px;
+      text-decoration: none;
+      transition: filter 0.15s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 11px 22px;
+      border-radius: 980px;
+      border: 1.5px solid rgba(127, 127, 127, 0.35);
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.15s ease;
+    }
+    .btn-secondary:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -53,8 +79,8 @@
     <h1 id="headline">Page not found</h1>
     <p id="subline">Let's get you back on the map.</p>
     <div class="invite-actions">
-      <a id="primary" class="pill pill--hero" href="/">Go home</a>
-      <a id="openApp" class="open-app" href="#" hidden>Already have the app? Open it</a>
+      <a id="primary" class="btn-primary" href="/">Go home</a>
+      <a id="openApp" class="btn-secondary" href="#" hidden>Already have the app? Open it</a>
     </div>
   </div>
 
@@ -68,11 +94,17 @@
       var primary = document.getElementById("primary");
       primary.textContent = "Get the app";
       primary.href = "https://apps.apple.com/app/king-of-the-block/id6776066439";
-      var openApp = document.getElementById("openApp");
-      openApp.hidden = false;
-      // The custom scheme covers "app installed but link opened in Safari",
-      // where universal links deliberately don't fire.
-      openApp.href = "kotb://add/" + user;
+      // The kotb:// scheme only exists on iOS — on a Mac (or Android) the
+      // click would die silently, so the button appears on iPhone/iPad only.
+      // It covers "app installed but link opened in Safari", where universal
+      // links deliberately don't fire.
+      var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+                  (navigator.userAgent.includes("Mac") && "ontouchend" in document); // iPadOS masquerades as Mac
+      if (isIOS) {
+        var openApp = document.getElementById("openApp");
+        openApp.hidden = false;
+        openApp.href = "kotb://add/" + user;
+      }
     }
   </script>
 
