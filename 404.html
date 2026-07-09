@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+  <title>King of the Block</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Served by GitHub Pages for every unknown path — which makes it the
+       landing page for invite links (/add/<username>) on phones that don't
+       have the app installed. OG tags stay generic: crawlers don't run the
+       JS below, so per-user previews aren't possible on a static 404. -->
+  <meta property="og:title" content="King of the Block">
+  <meta property="og:description" content="Join me on King of the Block — track your walks, win your block.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://kingoftheblock.app/assets/og-image.png">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css?v=19">
+  <style>
+    .invite-wrap {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 14px;
+      padding: 24px;
+    }
+    .invite-wrap h1 { margin: 0; }
+    .invite-wrap p { margin: 0; opacity: 0.75; }
+    .invite-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; }
+    .open-app { font-size: 0.95rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <div class="invite-wrap">
+    <img class="app-icon" src="/assets/app-icon.png" alt="King of the Block app icon">
+    <h1 id="headline">Page not found</h1>
+    <p id="subline">Let's get you back on the map.</p>
+    <div class="invite-actions">
+      <a id="primary" class="pill pill--hero" href="/">Go home</a>
+      <a id="openApp" class="open-app" href="#" hidden>Already have the app? Open it</a>
+    </div>
+  </div>
+
+  <script>
+    // /add/<username> → an invite landing; anything else → a plain 404.
+    var match = location.pathname.match(/^\/add\/([A-Za-z0-9_]{3,20})\/?$/);
+    if (match) {
+      var user = match[1];
+      document.getElementById("headline").textContent = "@" + user + " invited you to King of the Block";
+      document.getElementById("subline").textContent = "Track your walks. Win your block — before they take yours.";
+      var primary = document.getElementById("primary");
+      primary.textContent = "Get the app";
+      primary.href = "https://apps.apple.com/app/king-of-the-block/id6776066439";
+      var openApp = document.getElementById("openApp");
+      openApp.hidden = false;
+      // The custom scheme covers "app installed but link opened in Safari",
+      // where universal links deliberately don't fire.
+      openApp.href = "kotb://add/" + user;
+    }
+  </script>
+
+</body>
+</html>
