@@ -31,6 +31,15 @@
       gap: 14px;
       padding: 24px;
     }
+    /* The shared .app-icon class is mobile-only on the landing page; the
+       invite page is branded on every size. */
+    .invite-wrap .app-icon {
+      display: block;
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
     .invite-wrap h1 { margin: 0; }
     .invite-wrap p { margin: 0; opacity: 0.75; }
     .invite-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; }
